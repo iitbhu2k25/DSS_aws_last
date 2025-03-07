@@ -13,33 +13,33 @@ def stp_home(request):
 
 @csrf_exempt
 def GetStatesView(request):
-    states=State.objects.values('state_code','state_name')
-    states=[{'id': state['state_code'],'name':state['state_name']} for state in states]
+    states=State.objects.values('state_short','state_name')
+    states=[{'id': state['state_short'],'name':state['state_name']} for state in states]
     return JsonResponse(list(states),safe=False)
 
 @csrf_exempt
 def GetDistrictView(request):
     if request.method == 'POST':
-        state_id=int(json.loads(request.body).get('state'))
-        print("state id is ",state_id)
-        districts=District.objects.values('district_code','district_name').filter(state_id=state_id).order_by('district_name')
-        districts=[{'id': district['district_code'],'name':district['district_name']} for district in districts]
+        state_id=json.loads(request.body).get('state')
+        districts=District.objects.values('district_name').filter(state_short=state_id).order_by('district_name')
+        districts=[{'id': district['district_name'],'name':district['district_name']} for district in districts]
         return JsonResponse(list(districts),safe=False)
 
 @csrf_exempt
 def GetSubDistrictView(request):
     if request.method == 'POST':
-        district_id=(json.loads(request.body).get('districts'))
-        SubDistricts=list(SubDistrict.objects.values('subdistrict_code','subdistrict_name').filter(district_id__in=district_id).order_by('subdistrict_name'))
-        SubDistricts=[{'id': SubDistrict['subdistrict_code'],'name':SubDistrict['subdistrict_name']} for SubDistrict in SubDistricts]
+        district_name=(json.loads(request.body).get('districts'))
+        SubDistricts=list(SubDistrict.objects.values('subdistrict_name').filter(district_name__in=district_name).order_by('subdistrict_name'))
+        SubDistricts=[{'id': SubDistrict['subdistrict_name'],'name':SubDistrict['subdistrict_name']} for SubDistrict in SubDistricts]
         return JsonResponse(list(SubDistricts),safe=False)
 
 @csrf_exempt
 def  GetVillageView(request):
     if request.method == 'POST':
-        SubDistrict_id=(json.loads(request.body).get('subDistricts'))
-        villages=list(Village.objects.values('village_id','village_name').filter(subdistrict_id_id__in=SubDistrict_id))
-        villages=[{'id': village['village_id'],'name':village['village_name']} for village in villages]
+        print("in the villages is ",json.loads(request.body))
+        SubDistrict_name=(json.loads(request.body).get('subDistricts'))
+        villages=list(Village.objects.values('village_name').filter(subdistrict__in=SubDistrict_name))
+        villages=[{'id': village['village_name'],'name':village['village_name']} for village in villages]
         return JsonResponse(list(villages),safe=False)
 
 
@@ -66,37 +66,37 @@ def GetBoundry(request):
             request_data = json.loads(request.body)
             print(request_data)
             try:
-                if request_data.get('subDistricts'):            
-                    subDistricts=request_data.get('subDistricts')
-                    print("getting District_Id is ",subDistricts)
-                    subDistricts=list(map(int,subDistricts))
+                if request_data.get('subDistrictNames'):   
+                    District_name=request_data.get('districtNames')
+                    state_code=request_data.get('stateId')         
+                    subDistricts=request_data.get('subDistrictNames')
                     shapefile_path = os.path.join(settings.BASE_DIR, 'media', 'Rajat_data', 'shape_stp', 'subdistrict', 'subdistrict_updated.shp')
                     gdf = gpd.read_file(shapefile_path)
                     if gdf.crs is None or gdf.crs.to_epsg() != 4326:
                         gdf = gdf.to_crs(epsg=4326)
-                    filtered_gdf = gdf[gdf['subdis_cod'].isin(subDistricts)]
+                    filtered_gdf = gdf[(gdf['state_name'] == state_code) & (gdf['dist_name'].isin(District_name)) & gdf['subdis_nam'].isin(subDistricts)]
                     geojson_data = json.loads(filtered_gdf.to_json())
                     return JsonResponse(geojson_data, safe=False)
                 
-                elif request_data.get('districts'):
-                    District_Id=request_data.get('districts')
+                elif request_data.get('districtNames'):
+                    District_name=request_data.get('districtNames')
+                    state_code=request_data.get('stateId')
                     shapefile_path = os.path.join(settings.BASE_DIR, 'media', 'Rajat_data', 'shape_stp', 'district', 'district.shp')
                     gdf = gpd.read_file(shapefile_path)
                     if gdf.crs is None or gdf.crs.to_epsg() != 4326:
                         gdf = gdf.to_crs(epsg=4326)
-                    filtered_gdf = gdf[gdf['district_c'].isin(District_Id)]
+                    filtered_gdf = gdf[(gdf['State'] == state_code) & (gdf['District'].isin(District_name))]
                     geojson_data = json.loads(filtered_gdf.to_json())
                     return JsonResponse(geojson_data, safe=False)
                 
                 else :
-                    stateId=request_data.get('stateId')
-                    if int(stateId)<10:
-                        stateId='0'+stateId
+                    state_code=request_data.get('stateId')
+                    print("stateId in polygons is ",state_code)
                     shapefile_path = os.path.join(settings.BASE_DIR, 'media', 'Rajat_data', 'shape_stp', 'state', 'state.shp')
                     gdf = gpd.read_file(shapefile_path)
                     if gdf.crs is None or gdf.crs.to_epsg() != 4326:
                         gdf = gdf.to_crs(epsg=4326)
-                    filtered_gdf = gdf[gdf['state_code'] == stateId]  
+                    filtered_gdf = gdf[gdf['State'] == state_code]  
                     geojson_data = json.loads(filtered_gdf.to_json())
                     return JsonResponse(geojson_data, safe=False)
                 
