@@ -64,9 +64,19 @@ def GetBoundry(request):
         try:
             # Read the shapefile
             request_data = json.loads(request.body)
-            print(request_data)
+
             try:
-                if request_data.get('subDistrictNames'):   
+                if request_data.get('villages'):
+                    villages_name=request_data.get('villages')
+                    shapefile_path = os.path.join(settings.BASE_DIR, 'media', 'Rajat_data', 'shape_stp', 'villages', 'Basin_Village_PCS.shp')
+                    gdf = gpd.read_file(shapefile_path)
+                    if gdf.crs is None or gdf.crs.to_epsg() != 4326:
+                        gdf = gdf.to_crs(epsg=4326)
+                    filtered_gdf = gdf[(gdf['NAME_1'].isin(villages_name))]
+                    geojson_data = json.loads(filtered_gdf.to_json())
+                    return JsonResponse(geojson_data, safe=False)
+                
+                elif request_data.get('subDistrictNames'):   
                     District_name=request_data.get('districtNames')
                     state_code=request_data.get('stateId')         
                     subDistricts=request_data.get('subDistrictNames')
