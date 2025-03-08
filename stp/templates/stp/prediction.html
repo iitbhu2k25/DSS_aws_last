@@ -1,4 +1,4 @@
-{% extends "./base.html" %} 
+{% extends "./base.html" %}
 {% block content %}
 </div>
 <div class="container-fluid py-4">
@@ -26,23 +26,15 @@
               <div class="form-group">
                 <label for="district-dropdown" class="form-label fw-bold">District:</label>
                 <div class="dropdown w-100">
-                  <button
-                    class="btn btn-outline-primary btn-sm dropdown-toggle w-100 custom-dropdown-btn"
-                    type="button"
-                    id="districtDropdown"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                    disabled
-                  >
+                  <button class="btn btn-outline-primary btn-sm dropdown-toggle w-100 custom-dropdown-btn" type="button"
+                    id="districtDropdown" data-bs-toggle="dropdown" aria-expanded="false" disabled>
                     --Choose Districts--
                   </button>
-                  <div
-                    class="dropdown-menu w-100 p-2 shadow-sm custom-dropdown-menu"
-                    id="districtDropdownMenu"
-                    style="max-height: 300px; overflow-y: auto; position: absolute; z-index: 9999;"
-                  >
+                  <div class="dropdown-menu w-100 p-2 shadow-sm custom-dropdown-menu" id="districtDropdownMenu"
+                    style="max-height: 300px; overflow-y: auto; position: absolute; z-index: 9999;">
                     <div class="px-2 pb-2">
-                      <input type="text" class="form-control form-control-sm search-input" placeholder="Search districts..." id="districtSearchInput">
+                      <input type="text" class="form-control form-control-sm search-input"
+                        placeholder="Search districts..." id="districtSearchInput">
                     </div>
                     <div class="dropdown-divider"></div>
                     <div id="districtCheckboxesContainer"></div>
@@ -54,23 +46,15 @@
               <div class="form-group">
                 <label for="sub_district-dropdown" class="form-label fw-bold">Sub-District:</label>
                 <div class="dropdown w-100">
-                  <button
-                    class="btn btn-outline-primary btn-sm dropdown-toggle w-100 custom-dropdown-btn"
-                    type="button"
-                    id="subDistrictDropdown"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                    disabled
-                  >
+                  <button class="btn btn-outline-primary btn-sm dropdown-toggle w-100 custom-dropdown-btn" type="button"
+                    id="subDistrictDropdown" data-bs-toggle="dropdown" aria-expanded="false" disabled>
                     --Choose Sub-Districts--
                   </button>
-                  <div
-                    class="dropdown-menu w-100 p-2 shadow-sm custom-dropdown-menu"
-                    id="subDistrictDropdownMenu"
-                    style="max-height: 300px; overflow-y: auto; position: absolute; z-index: 9999;"
-                  >
+                  <div class="dropdown-menu w-100 p-2 shadow-sm custom-dropdown-menu" id="subDistrictDropdownMenu"
+                    style="max-height: 300px; overflow-y: auto; position: absolute; z-index: 9999;">
                     <div class="px-2 pb-2">
-                      <input type="text" class="form-control form-control-sm search-input" placeholder="Search sub-districts..." id="subDistrictSearchInput">
+                      <input type="text" class="form-control form-control-sm search-input"
+                        placeholder="Search sub-districts..." id="subDistrictSearchInput">
                     </div>
                     <div class="dropdown-divider"></div>
                     <div id="subDistrictCheckboxesContainer"></div>
@@ -82,23 +66,15 @@
               <div class="form-group">
                 <label for="village" id="villageLabel" class="form-label fw-bold">Village:</label>
                 <div class="dropdown w-100">
-                  <button
-                    class="btn btn-outline-primary btn-sm dropdown-toggle w-100 custom-dropdown-btn"
-                    type="button"
-                    id="villageDropdown"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                    disabled
-                  >
+                  <button class="btn btn-outline-primary btn-sm dropdown-toggle w-100 custom-dropdown-btn" type="button"
+                    id="villageDropdown" data-bs-toggle="dropdown" aria-expanded="false" disabled>
                     --Choose Villages--
                   </button>
-                  <div
-                    class="dropdown-menu w-100 p-2 shadow-sm custom-dropdown-menu"
-                    id="villageDropdownMenu"
-                    style="max-height: 300px; overflow-y: auto; position: absolute; z-index: 9999;"
-                  >
+                  <div class="dropdown-menu w-100 p-2 shadow-sm custom-dropdown-menu" id="villageDropdownMenu"
+                    style="max-height: 300px; overflow-y: auto; position: absolute; z-index: 9999;">
                     <div class="px-2 pb-2">
-                      <input type="text" class="form-control form-control-sm search-input" placeholder="Search villages..." id="villageSearchInput">
+                      <input type="text" class="form-control form-control-sm search-input"
+                        placeholder="Search villages..." id="villageSearchInput">
                     </div>
                     <div class="dropdown-divider"></div>
                     <div id="villageCheckboxesContainer"></div>
@@ -107,9 +83,9 @@
               </div>
             </div>
           </div>
-          
+
           <hr class="my-3">
-          
+
           <!-- Second Row: Tier -> State -> District -> Sub-district -> Town -->
           <div class="row g-3">
             <div class="col-md-2">
@@ -138,23 +114,15 @@
               <div class="form-group">
                 <label for="district-dropdown-tier" class="form-label fw-bold">District:</label>
                 <div class="dropdown w-100">
-                  <button
-                    class="btn btn-outline-primary btn-sm dropdown-toggle w-100 custom-dropdown-btn"
-                    type="button"
-                    id="districtDropdownTier"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                    disabled
-                  >
+                  <button class="btn btn-outline-primary btn-sm dropdown-toggle w-100 custom-dropdown-btn" type="button"
+                    id="districtDropdownTier" data-bs-toggle="dropdown" aria-expanded="false" disabled>
                     --Choose Districts--
                   </button>
-                  <div
-                    class="dropdown-menu w-100 p-2 shadow-sm custom-dropdown-menu"
-                    id="districtDropdownTierMenu"
-                    style="max-height: 300px; overflow-y: auto; position: absolute; z-index: 9999;"
-                  >
+                  <div class="dropdown-menu w-100 p-2 shadow-sm custom-dropdown-menu" id="districtDropdownTierMenu"
+                    style="max-height: 300px; overflow-y: auto; position: absolute; z-index: 9999;">
                     <div class="px-2 pb-2">
-                      <input type="text" class="form-control form-control-sm search-input" placeholder="Search districts..." id="districtTierSearchInput">
+                      <input type="text" class="form-control form-control-sm search-input"
+                        placeholder="Search districts..." id="districtTierSearchInput">
                     </div>
                     <div class="dropdown-divider"></div>
                     <div id="districtCheckboxesContainerTier"></div>
@@ -166,23 +134,15 @@
               <div class="form-group">
                 <label for="sub_district-dropdown-tier" class="form-label fw-bold">Sub-District:</label>
                 <div class="dropdown w-100">
-                  <button
-                    class="btn btn-outline-primary btn-sm dropdown-toggle w-100 custom-dropdown-btn"
-                    type="button"
-                    id="subDistrictDropdownTier"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                    disabled
-                  >
+                  <button class="btn btn-outline-primary btn-sm dropdown-toggle w-100 custom-dropdown-btn" type="button"
+                    id="subDistrictDropdownTier" data-bs-toggle="dropdown" aria-expanded="false" disabled>
                     --Choose Sub-Districts--
                   </button>
-                  <div
-                    class="dropdown-menu w-100 p-2 shadow-sm custom-dropdown-menu"
-                    id="subDistrictDropdownTierMenu"
-                    style="max-height: 300px; overflow-y: auto; position: absolute; z-index: 9999;"
-                  >
+                  <div class="dropdown-menu w-100 p-2 shadow-sm custom-dropdown-menu" id="subDistrictDropdownTierMenu"
+                    style="max-height: 300px; overflow-y: auto; position: absolute; z-index: 9999;">
                     <div class="px-2 pb-2">
-                      <input type="text" class="form-control form-control-sm search-input" placeholder="Search sub-districts..." id="subDistrictTierSearchInput">
+                      <input type="text" class="form-control form-control-sm search-input"
+                        placeholder="Search sub-districts..." id="subDistrictTierSearchInput">
                     </div>
                     <div class="dropdown-divider"></div>
                     <div id="subDistrictCheckboxesContainerTier"></div>
@@ -194,23 +154,15 @@
               <div class="form-group">
                 <label for="town" id="townLabel" class="form-label fw-bold">Town:</label>
                 <div class="dropdown w-100">
-                  <button
-                    class="btn btn-outline-primary btn-sm dropdown-toggle w-100 custom-dropdown-btn"
-                    type="button"
-                    id="townDropdown"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                    disabled
-                  >
+                  <button class="btn btn-outline-primary btn-sm dropdown-toggle w-100 custom-dropdown-btn" type="button"
+                    id="townDropdown" data-bs-toggle="dropdown" aria-expanded="false" disabled>
                     --Choose Towns--
                   </button>
-                  <div
-                    class="dropdown-menu w-100 p-2 shadow-sm custom-dropdown-menu"
-                    id="townDropdownMenu"
-                    style="max-height: 300px; overflow-y: auto; position: absolute; z-index: 9999;"
-                  >
+                  <div class="dropdown-menu w-100 p-2 shadow-sm custom-dropdown-menu" id="townDropdownMenu"
+                    style="max-height: 300px; overflow-y: auto; position: absolute; z-index: 9999;">
                     <div class="px-2 pb-2">
-                      <input type="text" class="form-control form-control-sm search-input" placeholder="Search towns..." id="townSearchInput">
+                      <input type="text" class="form-control form-control-sm search-input" placeholder="Search towns..."
+                        id="townSearchInput">
                     </div>
                     <div class="dropdown-divider"></div>
                     <div id="townCheckboxesContainer"></div>
@@ -232,46 +184,26 @@
             <div class="col-md-6 border-end">
               <div class="d-grid gap-2">
                 <div class="form-check custom-checkbox">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    id="check1"
-                    name="option1"
-                  />
+                  <input class="form-check-input" type="checkbox" id="check1" name="option1" />
                   <label class="form-check-label" for="check1">
                     <i class="fas fa-water text-primary me-2"></i>Sewage Gap
                   </label>
                 </div>
                 <div class="form-check custom-checkbox">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    id="check2"
-                    name="option2"
-                  />
+                  <input class="form-check-input" type="checkbox" id="check2" name="option2" />
                   <label class="form-check-label" for="check2">
                     <i class="fas fa-temperature-high text-danger me-2"></i>Seawage generation
                   </label>
                 </div>
                 <div class="form-check custom-checkbox">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    id="check3"
-                    name="option3"
-                  />
+                  <input class="form-check-input" type="checkbox" id="check3" name="option3" />
                   <label class="form-check-label" for="check3">
                     <i class="fas fa-cloud-rain text-info me-2"></i>Water Quality index
-                    
+
                   </label>
                 </div>
                 <div class="form-check custom-checkbox">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    id="check4"
-                    name="option4"
-                  />
+                  <input class="form-check-input" type="checkbox" id="check4" name="option4" />
                   <label class="form-check-label" for="check4">
                     <i class="fas fa-users text-success me-2"></i>Mean Temperature
                   </label>
@@ -281,45 +213,25 @@
             <div class="col-md-6">
               <div class="d-grid gap-2">
                 <div class="form-check custom-checkbox">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    id="check5"
-                    name="option5"
-                  />
+                  <input class="form-check-input" type="checkbox" id="check5" name="option5" />
                   <label class="form-check-label" for="check5">
                     <i class="fas fa-landmark text-warning me-2"></i>Mean Rainfall
                   </label>
                 </div>
                 <div class="form-check custom-checkbox">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    id="check6"
-                    name="option6"
-                  />
+                  <input class="form-check-input" type="checkbox" id="check6" name="option6" />
                   <label class="form-check-label" for="check6">
                     <i class="fas fa-chart-line text-primary me-2"></i>Distance to River
                   </label>
                 </div>
                 <div class="form-check custom-checkbox">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    id="check7"
-                    name="option7"
-                  />
+                  <input class="form-check-input" type="checkbox" id="check7" name="option7" />
                   <label class="form-check-label" for="check7">
                     <i class="fas fa-tint text-info me-2"></i>population density
                   </label>
                 </div>
                 <div class="form-check custom-checkbox">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    id="check7"
-                    name="option7"
-                  />
+                  <input class="form-check-input" type="checkbox" id="check7" name="option7" />
                   <label class="form-check-label" for="check7">
                     <i class="fas fa-tint text-info me-2"></i>Number of ASI sites
                   </label>
@@ -331,12 +243,8 @@
       </div>
 
       <!-- Submit Button -->
-      <button
-        type="button"
-        id="submit-button1"
-        class="btn btn-primary btn-lg w-30 mb-2 shadow-sm"
-        onclick="submitForm(event)"
-      >
+      <button type="button" id="submit-button1" class="btn btn-primary btn-lg w-30 mb-2 shadow-sm"
+        onclick="submitForm(event)">
         Submit
       </button>
 
@@ -346,10 +254,7 @@
           <h3 class="mb-0"><i class="fas fa-table me-2"></i>Results</h3>
         </div>
         <div class="card-body" id="results-box">
-          <div
-            class="table-responsive"
-            style="max-height: 200px; overflow-y: auto"
-          >
+          <div class="table-responsive" style="max-height: 200px; overflow-y: auto">
             <table class="table table-striped">
               <thead class="table-blue">
                 <tr id="headerRow"></tr>
@@ -361,20 +266,14 @@
           </div>
         </div>
       </div>
-      <button
-        type="button"
-        class="btn btn-primary btn-sm m-1 mt-4 text-xl-center"
-        id="showBoundariesButton"
-        style="
+      <button type="button" class="btn btn-primary btn-sm m-1 mt-4 text-xl-center" id="showBoundariesButton" style="
           width: 140px;
           height: 60px;
           font-size: 18px;
           border-radius: 30px;
           background-color: #76ba1b;
           border: none;
-        "
-        onclick="ranking(event)"
-      >
+        " onclick="ranking(event)">
         Ranking
       </button>
     </div>
@@ -385,16 +284,16 @@
         <div class="card-header text-white" id="map-view-header">
           <h3 class="mb-0"><i class="fas fa-map me-2"></i>Map View</h3>
         </div>
-        <div class="card-body p-0 map-container" 
-             style="border: 1px solid #ffffff; border-top: none; border-radius: 0 0 15px 15px; overflow: hidden; position: relative;">
-          
+        <div class="card-body p-0 map-container"
+          style="border: 1px solid #ffffff; border-top: none; border-radius: 0 0 15px 15px; overflow: hidden; position: relative;">
+
           <!-- Map Controls - Only Fullscreen -->
           <div class="map-controls">
             <button id="fullscreenBtn" class="btn btn-light control-btn shadow-sm" title="Fullscreen">
               <i class="fas fa-expand"></i>
             </button>
           </div>
-          
+
           <!-- Modern Google-style Map Type Control -->
           <div class="map-type-control">
             <div class="map-type-buttons">
@@ -408,24 +307,14 @@
               </button>
               <button id="mapTypeTerrain" class="map-type-btn" title="Terrain View">
                 <i class="fas fa-mountain"></i>
-                <span>Terrain</span>
+                <span>No Basemap</span>
               </button>
             </div>
           </div>
-          
+
           <!-- Map Legend -->
-          <div class="map-legend">
-            <h6>Legend</h6>
-            <div class="legend-item">
-              <span class="legend-color" style="background-color: rgba(118, 186, 27, 0.2); border: 2px solid #76ba1b;"></span>
-              <span>Selected Area</span>
-            </div>
-            <div class="legend-item">
-              <span class="legend-color" style="background-color: rgba(0, 123, 255, 0.2); border: 2px solid #007bff;"></span>
-              <span>Points of Interest</span>
-            </div>
-          </div>
           
+
           <!-- Map Container -->
           <div id="map" class="leaflet-map"></div>
         </div>
@@ -464,7 +353,7 @@
     transition: all 0.2s ease;
   }
 
-  .form-check-input:checked + .form-check-label {
+  .form-check-input:checked+.form-check-label {
     background-color: #e9ecef;
   }
 
@@ -472,7 +361,7 @@
   .custom-dropdown-menu {
     padding: 12px !important;
     border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
   }
 
   .custom-dropdown-btn {
@@ -483,7 +372,7 @@
     white-space: nowrap;
     padding: 8px 12px;
   }
-  
+
   .custom-dropdown-btn:hover {
     background-color: #f8f9fa;
   }
@@ -494,7 +383,7 @@
     padding: 8px;
     border-color: #dee2e6;
   }
-  
+
   .search-input:focus {
     box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
     border-color: #80bdff;
@@ -507,15 +396,15 @@
     border-radius: 4px;
     transition: background-color 0.2s ease;
   }
-  
+
   .dropdown-menu .form-check:hover {
     background-color: #f8f9fa;
   }
-  
+
   .dropdown-menu .form-check-input {
     margin-top: 0.3em;
   }
-  
+
   .dropdown-menu .form-check-label {
     margin-left: 5px;
     transform: none;
@@ -543,12 +432,14 @@
     border: 1px solid royalblue;
     border-bottom: none;
   }
+
   #card-header-property2 {
     border-radius: 15px 15px 0px 0px;
     background-color: none;
     border: 1px solid green;
     border-bottom: none;
   }
+
   .card {
     border: none;
     transition: transform 0.2s ease;
@@ -562,20 +453,20 @@
 
   /* Enhanced Map Container */
   .leaflet-map {
-    height: calc(100vh - 160px); 
+    height: calc(100vh - 160px);
     min-height: 500px;
     width: 100%;
     border-radius: 0 0 15px 15px;
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
   }
-  
+
   #map-view-header {
     color: white;
     border-radius: 15px 15px 0px 0px;
     border: none;
     font-family: 'Lexend Deca', sans-serif;
   }
-  
+
   /* Modern Map Controls - Only Fullscreen */
   .map-controls {
     position: absolute;
@@ -583,7 +474,7 @@
     right: 15px;
     z-index: 1000;
   }
-  
+
   .map-controls .control-btn {
     width: 40px;
     height: 40px;
@@ -593,16 +484,16 @@
     justify-content: center;
     border-radius: 4px;
     background: white;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     border: none;
     transition: all 0.2s ease;
   }
-  
+
   .map-controls .control-btn:hover {
     background-color: #f8f9fa;
     transform: scale(1.05);
   }
-  
+
   /* Google-style Map Type Control */
   .map-type-control {
     position: absolute;
@@ -611,15 +502,15 @@
     z-index: 1000;
     background: white;
     border-radius: 4px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     overflow: hidden;
   }
-  
+
   .map-type-buttons {
     display: flex;
     flex-direction: column;
   }
-  
+
   .map-type-btn {
     background: none;
     border: none;
@@ -633,23 +524,23 @@
     font-size: 13px;
     color: #555;
   }
-  
+
   .map-type-btn:hover {
     background-color: #f0f0f0;
   }
-  
+
   .map-type-btn.active {
     background-color: #e6e6e6;
     color: #1a73e8;
     font-weight: 500;
   }
-  
+
   .map-type-btn i {
     margin-right: 8px;
     width: 16px;
     text-align: center;
   }
-  
+
   /* Enhanced Legend */
   .map-legend {
     position: absolute;
@@ -658,17 +549,17 @@
     background: white;
     padding: 12px;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     max-width: 180px;
     border: 1px solid #e0e0e0;
     transition: opacity 0.3s ease;
   }
-  
+
   .map-legend:hover {
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   }
-  
+
   .map-legend h6 {
     margin-top: 0;
     margin-bottom: 10px;
@@ -678,14 +569,14 @@
     border-bottom: 1px solid #e0e0e0;
     padding-bottom: 5px;
   }
-  
+
   .legend-item {
     display: flex;
     align-items: center;
     margin-bottom: 8px;
     font-size: 12px;
   }
-  
+
   .legend-color {
     display: inline-block;
     width: 18px;
@@ -705,6 +596,7 @@
     height: 60px;
     position: relative;
   }
+
   #submit-button1:before {
     content: "";
     border-radius: 50%;
@@ -719,15 +611,18 @@
     transform: scale(1.7, 1.7);
     transition: 0.7s;
   }
+
   #submit-button1:active:before {
     transform: scale(0, 0);
     opacity: 1;
     transition: 0s;
   }
+
   #categories-card {
     border: 1px solid green;
     border-top: none;
   }
+
   #results-box-head {
     border: none;
     background: #e0e0e0;
@@ -736,7 +631,7 @@
   #results-box {
     border: none;
   }
-  
+
   /* Improved Loading Container */
   #loading-container {
     display: none;
@@ -757,9 +652,9 @@
     padding: 30px;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
-  
+
   .spinner-border {
     width: 3rem;
     height: 3rem;
@@ -770,6 +665,7 @@
     cursor: pointer;
     transition: background-color 0.2s ease;
   }
+
   .ol-popup {
     background-color: white;
     padding: 15px;
@@ -801,12 +697,10 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.2),
-      transparent
-    );
+    background: linear-gradient(90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent);
     animation: loading 1.5s infinite;
   }
 
@@ -837,7 +731,7 @@
     villages: [], // Will store village IDs
     villageNames: [], // Will store village names for display
   };
-  
+
   // New tier-based location selection
   let selectedTierLocation = {
     tier: null,
@@ -850,10 +744,11 @@
     towns: [], // Will store town IDs
     townNames: [], // Will store town names for display
   };
-  
+
   let selectedCategories = [];
   let currentBoundary = null;
   let map;
+  let legend = null;
 
   function showLoader() {
     document.getElementById("loading-container").style.display = "flex";
@@ -873,35 +768,40 @@
       minZoom: 4,
       maxZoom: 18
     }).setView([20.5937, 78.9629], 5);
-    
+
     // Define different basemap layers
-    const streetLayer = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution: "© OpenStreetMap contributors",
-    });
-    
+    const streetLayer = L.tileLayer(
+      "https://{s}.google.com/vt/lyrs=m@221097413,traffic&x={x}&y={y}&z={z}",
+      {
+        subdomains: ["mt0", "mt1", "mt2", "mt3"],
+        attribution:
+          '&copy; <a href="https://www.google.com/maps">Google Traffic</a>',
+      }
+    )
+
     const satelliteLayer = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", {
       attribution: "Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community"
     });
-    
+
     const terrainLayer = L.tileLayer("https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}{r}.png", {
       attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       subdomains: 'abcd'
     });
-    
+
     // Set default basemap
     streetLayer.addTo(map);
-    
+
     // Add scale control
     L.control.scale({
       metric: true,
       imperial: false,
       position: 'bottomleft'
     }).addTo(map);
-    
+
     // Add fullscreen functionality
-    document.getElementById('fullscreenBtn').addEventListener('click', function() {
+    document.getElementById('fullscreenBtn').addEventListener('click', function () {
       const mapElement = document.getElementById('map');
-      
+
       if (!document.fullscreenElement) {
         if (mapElement.requestFullscreen) {
           mapElement.requestFullscreen();
@@ -926,91 +826,91 @@
         this.innerHTML = '<i class="fas fa-expand"></i>';
       }
     });
-    
+
     // Add Google-style map type controls
-    document.getElementById('mapTypeStreet').addEventListener('click', function() {
+    document.getElementById('mapTypeStreet').addEventListener('click', function () {
       map.removeLayer(satelliteLayer);
       map.removeLayer(terrainLayer);
       streetLayer.addTo(map);
-      
+
       // Update active button state
       setActiveMapType('mapTypeStreet');
     });
-    
-    document.getElementById('mapTypeSatellite').addEventListener('click', function() {
+
+    document.getElementById('mapTypeSatellite').addEventListener('click', function () {
       map.removeLayer(streetLayer);
       map.removeLayer(terrainLayer);
       satelliteLayer.addTo(map);
-      
+
       // Update active button state
       setActiveMapType('mapTypeSatellite');
     });
-    
-    document.getElementById('mapTypeTerrain').addEventListener('click', function() {
+
+    document.getElementById('mapTypeTerrain').addEventListener('click', function () {
       map.removeLayer(streetLayer);
       map.removeLayer(satelliteLayer);
       terrainLayer.addTo(map);
-      
+
       // Update active button state
       setActiveMapType('mapTypeTerrain');
     });
   }
-  
+
   // Helper function to set active map type
   function setActiveMapType(activeId) {
     // Remove active class from all buttons
     document.querySelectorAll('.map-type-btn').forEach(btn => {
       btn.classList.remove('active');
     });
-    
+
     // Add active class to the selected button
     document.getElementById(activeId).classList.add('active');
   }
-  
+
   // Initialize search functionality for dropdowns
   function initializeSearchFunctionality() {
     // District search
-    document.getElementById('districtSearchInput').addEventListener('input', function() {
+    document.getElementById('districtSearchInput').addEventListener('input', function () {
       filterDropdownItems('districtCheckboxesContainer', this.value);
     });
-    
+
     // Sub-district search
-    document.getElementById('subDistrictSearchInput').addEventListener('input', function() {
+    document.getElementById('subDistrictSearchInput').addEventListener('input', function () {
       filterDropdownItems('subDistrictCheckboxesContainer', this.value);
     });
-    
+
     // Village search
-    document.getElementById('villageSearchInput').addEventListener('input', function() {
+    document.getElementById('villageSearchInput').addEventListener('input', function () {
       filterDropdownItems('villageCheckboxesContainer', this.value);
     });
-    
+
     // District Tier search
-    document.getElementById('districtTierSearchInput').addEventListener('input', function() {
+    document.getElementById('districtTierSearchInput').addEventListener('input', function () {
       filterDropdownItems('districtCheckboxesContainerTier', this.value);
     });
-    
+
     // Sub-district Tier search
-    document.getElementById('subDistrictTierSearchInput').addEventListener('input', function() {
+    document.getElementById('subDistrictTierSearchInput').addEventListener('input', function () {
       filterDropdownItems('subDistrictCheckboxesContainerTier', this.value);
     });
-    
+
     // Town search
-    document.getElementById('townSearchInput').addEventListener('input', function() {
+    document.getElementById('townSearchInput').addEventListener('input', function () {
       filterDropdownItems('townCheckboxesContainer', this.value);
     });
   }
-  
+
   // Function to filter dropdown items based on search input
   function filterDropdownItems(containerId, searchText) {
     const container = document.getElementById(containerId);
     const items = container.querySelectorAll('.form-check');
-    
+
     searchText = searchText.toLowerCase();
-    
+
     items.forEach(item => {
       const label = item.querySelector('label');
       const text = label.textContent.toLowerCase();
-      
+
       if (text.includes(searchText)) {
         item.style.display = '';
       } else {
@@ -1018,12 +918,12 @@
       }
     });
   }
-  
+
   // Load states for both dropdowns
   async function loadStates() {
     const stateDropdown = document.getElementById("state-dropdown");
     const stateTierDropdown = document.getElementById("state-dropdown-tier");
-    
+
     try {
       const response = await fetch("/stp/get_states/");
       const states = await response.json();
@@ -1040,7 +940,7 @@
         option.value = state.id;
         option.textContent = state.name;
         stateDropdown.appendChild(option);
-        
+
         // For the second dropdown (tier-based)
         const optionTier = document.createElement("option");
         optionTier.value = state.id;
@@ -1069,7 +969,7 @@
     try {
       showLoader();
       const response = await fetch("/stp/get_boundary/");
-      console.log("response",response)
+      console.log("response", response)
       const featureCollection = await response.json();
 
       if (featureCollection.features && map) {
@@ -1083,7 +983,7 @@
             fillColor: "#76ba1b",
             fillOpacity: 0.2,
           },
-          onEachFeature: function(feature, layer) {
+          onEachFeature: function (feature, layer) {
             if (feature.properties && feature.properties.name) {
               layer.bindTooltip(feature.properties.name, {
                 permanent: false,
@@ -1124,11 +1024,11 @@
 
     // Initialize form elements (which now includes loading states)
     initializeFormElements();
-    
+
     // Initialize search functionality
     initializeSearchFunctionality();
   });
-  
+
   // Utility Functions
   function getCSRFToken() {
     return document.querySelector("[name=csrfmiddlewaretoken]")?.value || "";
@@ -1137,10 +1037,10 @@
   // Enhanced boundary styling in updateBoundaryOnMap function
   async function updateBoundaryOnMap() {
     clearBoundary();
-    
+
     // Determine which location data to use based on active selection
     const activeLocation = document.getElementById("tier-dropdown").value ? selectedTierLocation : selectedLocation;
-    
+
     if (!activeLocation.state) return;
 
     try {
@@ -1159,7 +1059,7 @@
         clearBoundary();
 
         currentBoundary = L.geoJSON(boundaryData, {
-          style: function(feature) {
+          style: function (feature) {
             return {
               color: "#76ba1b",
               weight: 3,
@@ -1171,7 +1071,7 @@
               lineJoin: 'round'
             };
           },
-          onEachFeature: function(feature, layer) {
+          onEachFeature: function (feature, layer) {
             // Add tooltips to each feature
             if (feature.properties && feature.properties.name) {
               layer.bindTooltip(feature.properties.name, {
@@ -1180,12 +1080,12 @@
                 className: "custom-tooltip"
               });
             }
-            
+
             // Add popup with more details on click
             if (feature.properties) {
               let popupContent = '<div class="custom-popup">';
               popupContent += `<h6>${feature.properties.name || 'Selected Area'}</h6>`;
-              
+
               // Add more properties if available
               if (feature.properties.population) {
                 popupContent += `<p><strong>Population:</strong> ${feature.properties.population.toLocaleString()}</p>`;
@@ -1193,15 +1093,15 @@
               if (feature.properties.area) {
                 popupContent += `<p><strong>Area:</strong> ${feature.properties.area} sq km</p>`;
               }
-              
+
               popupContent += '</div>';
-              
+
               layer.bindPopup(popupContent);
             }
-            
+
             // Add hover effect
             layer.on({
-              mouseover: function(e) {
+              mouseover: function (e) {
                 const layer = e.target;
                 layer.setStyle({
                   weight: 4,
@@ -1211,7 +1111,7 @@
                   layer.bringToFront();
                 }
               },
-              mouseout: function(e) {
+              mouseout: function (e) {
                 currentBoundary.resetStyle(e.target);
               }
             });
@@ -1230,7 +1130,7 @@
       hideLoader();
     }
   }
-  
+
   // Location Selection Handlers - First Row
   async function handleDistrictSelection(event) {
     const districtId = event.target.getAttribute("data-id");
@@ -1264,7 +1164,7 @@
     } else {
       districtButton.textContent = "--Choose Districts--";
     }
-    
+
     subDistrictButton.textContent = "--Choose Sub-Districts--";
 
     // Reset and update dependent dropdowns
@@ -1314,7 +1214,7 @@
     } else {
       districtButton.textContent = "--Choose Districts--";
     }
-    
+
     subDistrictButton.textContent = "--Choose Sub-Districts--";
 
     // Reset and update dependent dropdowns
@@ -1362,13 +1262,13 @@
     } else {
       subDistrictButton.textContent = "--Choose Sub-Districts--";
     }
-    
+
     villageButton.textContent = "--Choose Villages--";
 
     await updateVillages();
     await updateBoundaryOnMap();
   }
-  
+
   // SubDistrict Selection for Tier Row
   async function handleSubDistrictTierSelection(event) {
     const subDistrictId = event.target.getAttribute("data-id");
@@ -1400,7 +1300,7 @@
     } else {
       subDistrictButton.textContent = "--Choose Sub-Districts--";
     }
-    
+
     townButton.textContent = "--Choose Towns--";
 
     await updateTowns();
@@ -1423,7 +1323,7 @@
         selectedLocation.villageNames.splice(index, 1);
       }
     }
-    
+
     // Update button text with selection count
     if (selectedLocation.villageNames.length > 0) {
       if (selectedLocation.villageNames.length <= 2) {
@@ -1437,7 +1337,7 @@
 
     await updateBoundaryOnMap();
   }
-  
+
   // Town selection handler - Second Row
   async function handleTownSelection(event) {
     const townId = event.target.getAttribute("data-id");
@@ -1454,7 +1354,7 @@
         selectedTierLocation.townNames.splice(index, 1);
       }
     }
-    
+
     // Update button text with selection count
     if (selectedTierLocation.townNames.length > 0) {
       if (selectedTierLocation.townNames.length <= 2) {
@@ -1465,7 +1365,7 @@
     } else {
       townButton.textContent = "--Choose Towns--";
     }
-        
+
     await updateBoundaryOnMap();
   }
 
@@ -1491,21 +1391,21 @@
       // Create select all option
       const selectAllItem = document.createElement("div");
       selectAllItem.classList.add("form-check", "select-all-option");
-      
+
       const selectAllCheckbox = document.createElement("input");
       selectAllCheckbox.type = "checkbox";
       selectAllCheckbox.classList.add("form-check-input");
       selectAllCheckbox.id = "select-all-districts";
-      
+
       const selectAllLabel = document.createElement("label");
       selectAllLabel.classList.add("form-check-label", "fw-bold");
       selectAllLabel.htmlFor = "select-all-districts";
       selectAllLabel.textContent = "Select All";
-      
+
       selectAllItem.appendChild(selectAllCheckbox);
       selectAllItem.appendChild(selectAllLabel);
       container.appendChild(selectAllItem);
-      
+
       // Add divider
       const divider = document.createElement("div");
       divider.classList.add("dropdown-divider", "my-2");
@@ -1534,9 +1434,9 @@
         listItem.appendChild(label);
         container.appendChild(listItem);
       });
-      
+
       // Select all functionality
-      selectAllCheckbox.addEventListener("change", function() {
+      selectAllCheckbox.addEventListener("change", function () {
         const checkboxes = container.querySelectorAll('.district-checkbox');
         checkboxes.forEach(cb => {
           if (cb.checked !== this.checked) {
@@ -1555,7 +1455,7 @@
       hideLoader(); // Hide loading GIF after request completes
     }
   }
-  
+
   // Districts Update - Second Row (Tier-based)
   async function updateDistrictsTier(stateId) {
     const container = document.getElementById("districtCheckboxesContainerTier");
@@ -1570,7 +1470,7 @@
           "Content-Type": "application/json",
           "X-CSRFToken": getCSRFToken(),
         },
-        body: JSON.stringify({ 
+        body: JSON.stringify({
           state: stateId,
           tier: selectedTierLocation.tier
         }),
@@ -1581,21 +1481,21 @@
       // Create select all option
       const selectAllItem = document.createElement("div");
       selectAllItem.classList.add("form-check", "select-all-option");
-      
+
       const selectAllCheckbox = document.createElement("input");
       selectAllCheckbox.type = "checkbox";
       selectAllCheckbox.classList.add("form-check-input");
       selectAllCheckbox.id = "select-all-districts-tier";
-      
+
       const selectAllLabel = document.createElement("label");
       selectAllLabel.classList.add("form-check-label", "fw-bold");
       selectAllLabel.htmlFor = "select-all-districts-tier";
       selectAllLabel.textContent = "Select All";
-      
+
       selectAllItem.appendChild(selectAllCheckbox);
       selectAllItem.appendChild(selectAllLabel);
       container.appendChild(selectAllItem);
-      
+
       // Add divider
       const divider = document.createElement("div");
       divider.classList.add("dropdown-divider", "my-2");
@@ -1623,9 +1523,9 @@
         listItem.appendChild(label);
         container.appendChild(listItem);
       });
-      
+
       // Select all functionality
-      selectAllCheckbox.addEventListener("change", function() {
+      selectAllCheckbox.addEventListener("change", function () {
         const checkboxes = container.querySelectorAll('.district-tier-checkbox');
         checkboxes.forEach(cb => {
           if (cb.checked !== this.checked) {
@@ -1670,21 +1570,21 @@
       // Create select all option
       const selectAllItem = document.createElement("div");
       selectAllItem.classList.add("form-check", "select-all-option");
-      
+
       const selectAllCheckbox = document.createElement("input");
       selectAllCheckbox.type = "checkbox";
       selectAllCheckbox.classList.add("form-check-input");
       selectAllCheckbox.id = "select-all-subdistricts";
-      
+
       const selectAllLabel = document.createElement("label");
       selectAllLabel.classList.add("form-check-label", "fw-bold");
       selectAllLabel.htmlFor = "select-all-subdistricts";
       selectAllLabel.textContent = "Select All";
-      
+
       selectAllItem.appendChild(selectAllCheckbox);
       selectAllItem.appendChild(selectAllLabel);
       container.appendChild(selectAllItem);
-      
+
       // Add divider
       const divider = document.createElement("div");
       divider.classList.add("dropdown-divider", "my-2");
@@ -1712,9 +1612,9 @@
         listItem.appendChild(label);
         container.appendChild(listItem);
       });
-      
+
       // Select all functionality
-      selectAllCheckbox.addEventListener("change", function() {
+      selectAllCheckbox.addEventListener("change", function () {
         const checkboxes = container.querySelectorAll('.subdistrict-checkbox');
         checkboxes.forEach(cb => {
           if (cb.checked !== this.checked) {
@@ -1731,7 +1631,7 @@
       hideLoader();
     }
   }
-  
+
   // Update Sub-Districts - Second Row (Tier-based)
   async function updateSubDistrictsTier() {
     const container = document.getElementById("subDistrictCheckboxesContainerTier");
@@ -1758,21 +1658,21 @@
       // Create select all option
       const selectAllItem = document.createElement("div");
       selectAllItem.classList.add("form-check", "select-all-option");
-      
+
       const selectAllCheckbox = document.createElement("input");
       selectAllCheckbox.type = "checkbox";
       selectAllCheckbox.classList.add("form-check-input");
       selectAllCheckbox.id = "select-all-subdistricts-tier";
-      
+
       const selectAllLabel = document.createElement("label");
       selectAllLabel.classList.add("form-check-label", "fw-bold");
       selectAllLabel.htmlFor = "select-all-subdistricts-tier";
       selectAllLabel.textContent = "Select All";
-      
+
       selectAllItem.appendChild(selectAllCheckbox);
       selectAllItem.appendChild(selectAllLabel);
       container.appendChild(selectAllItem);
-      
+
       // Add divider
       const divider = document.createElement("div");
       divider.classList.add("dropdown-divider", "my-2");
@@ -1800,9 +1700,9 @@
         listItem.appendChild(label);
         container.appendChild(listItem);
       });
-      
+
       // Select all functionality
-      selectAllCheckbox.addEventListener("change", function() {
+      selectAllCheckbox.addEventListener("change", function () {
         const checkboxes = container.querySelectorAll('.subdistrict-tier-checkbox');
         checkboxes.forEach(cb => {
           if (cb.checked !== this.checked) {
@@ -1851,21 +1751,21 @@
       // Create select all option
       const selectAllItem = document.createElement("div");
       selectAllItem.classList.add("form-check", "select-all-option");
-      
+
       const selectAllCheckbox = document.createElement("input");
       selectAllCheckbox.type = "checkbox";
       selectAllCheckbox.classList.add("form-check-input");
       selectAllCheckbox.id = "select-all-villages";
-      
+
       const selectAllLabel = document.createElement("label");
       selectAllLabel.classList.add("form-check-label", "fw-bold");
       selectAllLabel.htmlFor = "select-all-villages";
       selectAllLabel.textContent = "Select All";
-      
+
       selectAllItem.appendChild(selectAllCheckbox);
       selectAllItem.appendChild(selectAllLabel);
       container.appendChild(selectAllItem);
-      
+
       // Add divider
       const divider = document.createElement("div");
       divider.classList.add("dropdown-divider", "my-2");
@@ -1893,9 +1793,9 @@
         listItem.appendChild(label);
         container.appendChild(listItem);
       });
-      
+
       // Select all functionality
-      selectAllCheckbox.addEventListener("change", function() {
+      selectAllCheckbox.addEventListener("change", function () {
         const checkboxes = container.querySelectorAll('.village-checkbox');
         checkboxes.forEach(cb => {
           if (cb.checked !== this.checked) {
@@ -1905,7 +1805,7 @@
           }
         });
       });
-      
+
       villageButton.disabled = false;
     } catch (error) {
       console.error("Error fetching villages:", error);
@@ -1914,7 +1814,7 @@
       hideLoader();
     }
   }
-  
+
   // Update Towns - Second Row (Tier-based)
   async function updateTowns() {
     const container = document.getElementById("townCheckboxesContainer");
@@ -1947,21 +1847,21 @@
       // Create select all option
       const selectAllItem = document.createElement("div");
       selectAllItem.classList.add("form-check", "select-all-option");
-      
+
       const selectAllCheckbox = document.createElement("input");
       selectAllCheckbox.type = "checkbox";
       selectAllCheckbox.classList.add("form-check-input");
       selectAllCheckbox.id = "select-all-towns";
-      
+
       const selectAllLabel = document.createElement("label");
       selectAllLabel.classList.add("form-check-label", "fw-bold");
       selectAllLabel.htmlFor = "select-all-towns";
       selectAllLabel.textContent = "Select All";
-      
+
       selectAllItem.appendChild(selectAllCheckbox);
       selectAllItem.appendChild(selectAllLabel);
       container.appendChild(selectAllItem);
-      
+
       // Add divider
       const divider = document.createElement("div");
       divider.classList.add("dropdown-divider", "my-2");
@@ -1989,9 +1889,9 @@
         listItem.appendChild(label);
         container.appendChild(listItem);
       });
-      
+
       // Select all functionality
-      selectAllCheckbox.addEventListener("change", function() {
+      selectAllCheckbox.addEventListener("change", function () {
         const checkboxes = container.querySelectorAll('.town-checkbox');
         checkboxes.forEach(cb => {
           if (cb.checked !== this.checked) {
@@ -2001,7 +1901,7 @@
           }
         });
       });
-      
+
       townButton.disabled = false;
     } catch (error) {
       console.error("Error fetching towns:", error);
@@ -2042,7 +1942,7 @@
     const districtButton = document.getElementById("districtDropdown");
     const subDistrictButton = document.getElementById("subDistrictDropdown");
     const villageButton = document.getElementById("villageDropdown");
-    
+
     // Second row (tier-based) elements
     const tierDropdown = document.getElementById("tier-dropdown");
     const stateTierDropdown = document.getElementById("state-dropdown-tier");
@@ -2087,16 +1987,16 @@
         clearBoundary();
       }
     });
-    
+
     // Tier Dropdown Change Event - Second Row
-    tierDropdown.addEventListener("change", function() {
+    tierDropdown.addEventListener("change", function () {
       selectedTierLocation.tier = this.value;
-      
+
       // Reset state selection in tier row if tier changes
       stateTierDropdown.value = "";
       selectedTierLocation.state = null;
       selectedTierLocation.stateId = null;
-      
+
       // Reset district, subdistrict and town selections
       selectedTierLocation.districts = [];
       selectedTierLocation.districtNames = [];
@@ -2104,23 +2004,23 @@
       selectedTierLocation.subDistrictNames = [];
       selectedTierLocation.towns = [];
       selectedTierLocation.townNames = [];
-      
+
       // Reset buttons
       districtTierButton.textContent = "--Choose Districts--";
       subDistrictTierButton.textContent = "--Choose Sub-Districts--";
       townButton.textContent = "--Choose Towns--";
-      
+
       // Clear checkboxes containers
       document.getElementById("districtCheckboxesContainerTier").innerHTML = "";
       document.getElementById("subDistrictCheckboxesContainerTier").innerHTML = "";
       document.getElementById("townCheckboxesContainer").innerHTML = "";
-      
+
       // Disable buttons
       districtTierButton.disabled = true;
       subDistrictTierButton.disabled = true;
       townButton.disabled = true;
     });
-    
+
     // State Dropdown Change Event - Second Row (Tier-based)
     stateTierDropdown.addEventListener("change", async function () {
       const stateId = this.value;
@@ -2153,7 +2053,7 @@
         await updateBoundaryOnMap();
       }
     });
-    
+
     // Initialize category checkboxes
     for (let i = 1; i <= 7; i++) {
       const checkbox = document.getElementById(`check${i}`);
@@ -2161,54 +2061,187 @@
       checkbox.addEventListener("change", updateSelectedList);
     }
     updateSelectedList();
-    
+
     // Make dropdown menus persist when clicking inside them
     document.querySelectorAll('.custom-dropdown-menu').forEach(dropdown => {
-      dropdown.addEventListener('click', function(e) {
+      dropdown.addEventListener('click', function (e) {
         // Prevent dropdown from closing when clicking inside it (except for select all checkboxes)
-        if (!e.target.classList.contains('select-all-option') && 
-            !e.target.parentElement.classList.contains('select-all-option')) {
+        if (!e.target.classList.contains('select-all-option') &&
+          !e.target.parentElement.classList.contains('select-all-option')) {
           e.stopPropagation();
         }
       });
     });
   }
 
-  // Form submission and table handling
+  // for tempary bases 
   async function submitForm(event) {
     event.preventDefault();
     try {
       showLoader();
-      
-      // Determine which location data to use based on active selection
-      const activeLocation = document.getElementById("tier-dropdown").value 
-        ? { 
-            ...selectedTierLocation,
-            locationType: 'tier'
-          } 
-        : {
-            ...selectedLocation,
-            locationType: 'standard'
-          };
-      
-      const response = await fetch("/stp/table/", {
-        method: "POST",
+      const response = await fetch("/stp/tempy/", {
+        method: "GET",
         headers: {
           "Content-Type": "application/json",
           "X-CSRFToken": getCSRFToken(),
         },
-        body: JSON.stringify({
-          main_data: activeLocation,
-          categories: selectedCategories,
-        }),
       });
-      const data = await response.json();
-      updateTable(data);
+
+      // Parse the GeoJSON from the response
+      const featureCollection = await response.json();
+
+      if (featureCollection.features && map) {
+        clearBoundary();
+
+        // Extract all MEAN values to determine color ranges
+        const meanValues = featureCollection.features
+          .map(feature => feature.properties.MEAN)
+          .filter(value => value !== undefined && value !== null);
+
+        
+        meanValues.sort((a, b) => a - b);
+
+        // Create 5 breaks (quartiles)
+        const breaks = [
+          meanValues[0], // min
+          meanValues[Math.floor(meanValues.length * 0.2)],
+          meanValues[Math.floor(meanValues.length * 0.4)],
+          meanValues[Math.floor(meanValues.length * 0.6)],
+          meanValues[Math.floor(meanValues.length * 0.8)],
+          meanValues[meanValues.length - 1] // max
+        ];
+
+        // Define 5 colors (from light to dark green)
+        const colors = [
+          "#ff0000", // Red
+          "#ffff00", // Yellow
+          "#ffa500", // Orange
+          "#d2b48c", // Light Brown (Tan)
+          "#0000ff"  // Blue
+        ];
+
+        // Define category names for each range
+        const categoryNames = [
+          "Very Low",
+          "Low",
+          "Medium",
+          "High",
+          "Very High"
+        ];
+
+        // Function to get color based on MEAN value
+        function getColor(meanValue) {
+          if (meanValue <= breaks[1]) return colors[0];
+          if (meanValue <= breaks[2]) return colors[1];
+          if (meanValue <= breaks[3]) return colors[2];
+          if (meanValue <= breaks[4]) return colors[3];
+          return colors[4];
+        }
+        
+        // Function to get category name based on MEAN value
+        function getCategoryName(meanValue) {
+          if (meanValue <= breaks[1]) return categoryNames[0];
+          if (meanValue <= breaks[2]) return categoryNames[1];
+          if (meanValue <= breaks[3]) return categoryNames[2];
+          if (meanValue <= breaks[4]) return categoryNames[3];
+          return categoryNames[4];
+        }
+
+        currentBoundary = L.geoJSON(featureCollection, {
+          style: function (feature) {
+            return {
+              color: "#555",
+              weight: 1,
+              opacity: 1,
+              fillColor: getColor(feature.properties.MEAN),
+              fillOpacity: 0.7
+            };
+          },
+          onEachFeature: function (feature, layer) {
+            const category = getCategoryName(feature.properties.MEAN);
+            const tooltipContent =
+              `<strong>${feature.properties.name || 'Unnamed'}</strong><br>` +
+              `MEAN: ${feature.properties.MEAN?.toFixed(2) || 'N/A'}<br>` +
+              `Category: ${category}`;
+              
+            layer.bindTooltip(tooltipContent, {
+              permanent: false,
+              direction: "center",
+              className: "custom-tooltip"
+            });
+          }
+        }).addTo(map);
+
+        map.fitBounds(currentBoundary.getBounds(), {
+          padding: [50, 50],
+        });
+
+        // Add a legend with category names
+        addLegend(breaks, colors, categoryNames);
+      }
     } catch (error) {
-      console.error("Error submitting form:", error);
-      alert("Failed to submit form. Please try again.");
+      console.log("error in ",error)
     } finally {
       hideLoader(); // Hide loading GIF after request completes
+    }
+  }
+
+// Updated legend function to include category names
+function addLegend(breaks, colors, categoryNames) {
+  // Remove existing legend if present
+  if (window.legend) {
+    map.removeControl(window.legend);
+  }
+
+  // Create a new legend
+  window.legend = L.control({ position: "bottomright" });
+
+  window.legend.onAdd = function () {
+    const div = L.DomUtil.create("div", "info legend");
+    div.style.backgroundColor = "white";
+    div.style.padding = "10px";
+    div.style.borderRadius = "5px";
+    div.style.boxShadow = "0 0 15px rgba(0,0,0,0.2)";
+    div.style.pointerEvents = "auto"; // Make sure it can receive clicks
+    div.style.zIndex = "1000"; 
+
+    div.innerHTML = "<h4 style='margin-top: 0; margin-bottom: 8px;'>Legend</h4>";
+
+    // Add legend items with both color squares and category names
+    for (let i = 0; i < colors.length; i++) {
+      const fromValue = i === 0 ? breaks[0].toFixed(2) : breaks[i].toFixed(2);
+      const toValue = breaks[i + 1]?.toFixed(2) || "+";
+      
+      div.innerHTML +=
+        '<div style="display: flex; align-items: center; margin-bottom: 5px;">' +
+        `<i style="background: ${colors[i]}; width: 18px; height: 18px; display: inline-block; margin-right: 8px; border: 1px solid #555;"></i>` +
+        `<span><strong>${categoryNames[i]}</strong> (${fromValue} - ${toValue})</span>` +
+        '</div>';
+    }
+
+    return div;
+  };
+
+  window.legend.addTo(map);
+}
+  // Make sure you have this function defined
+  function clearBoundary() {
+    if (currentBoundary) {
+      map.removeLayer(currentBoundary);
+      currentBoundary = null;
+    }
+
+    // Also remove legend when clearing boundary
+    if (window.legend) {
+      map.removeControl(window.legend);
+      window.legend = null;
+    }
+  }
+  // Make sure you have this function defined
+  function clearBoundary() {
+    if (currentBoundary) {
+      map.removeLayer(currentBoundary);
+      currentBoundary = null;
     }
   }
 

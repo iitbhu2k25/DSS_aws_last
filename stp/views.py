@@ -42,6 +42,22 @@ def  GetVillageView(request):
         villages=[{'id': village['village_name'],'name':village['village_name']} for village in villages]
         return JsonResponse(list(villages),safe=False)
 
+@csrf_exempt
+def GetVaruna(request):
+    if request.method=='GET':
+        try:
+            print("try nto take the varuna")
+            shapefile_path = os.path.join(settings.BASE_DIR, 'media','Rajat_data','shape_stp','tempy','Priority.shp')
+            gdf = gpd.read_file(shapefile_path)
+            if gdf.crs is None or gdf.crs.to_epsg() != 4326:
+                gdf = gdf.to_crs(epsg=4326) 
+            geojson_data = json.loads(gdf.to_json())
+            print("staring sedn bakcen shpe file")
+            return JsonResponse(geojson_data, safe=False)
+        except Exception as e:
+            print("error is", str(e))
+            return JsonResponse({'error': str(e)}, status=500)
+
 
 @csrf_exempt
 def GetBoundry(request):
