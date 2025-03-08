@@ -408,7 +408,7 @@
               </button>
               <button id="mapTypeTerrain" class="map-type-btn" title="Terrain View">
                 <i class="fas fa-mountain"></i>
-                <span>Terrain</span>
+                <span>No Basemap</span>
               </button>
             </div>
           </div>
@@ -875,9 +875,14 @@
     }).setView([20.5937, 78.9629], 5);
     
     // Define different basemap layers
-    const streetLayer = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution: "© OpenStreetMap contributors",
-    });
+    const streetLayer = L.tileLayer(
+                "https://{s}.google.com/vt/lyrs=m@221097413,traffic&x={x}&y={y}&z={z}",
+                {
+                  subdomains: ["mt0", "mt1", "mt2", "mt3"],
+                  attribution:
+                    '&copy; <a href="https://www.google.com/maps">Google Traffic</a>',
+                }
+              )
     
     const satelliteLayer = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", {
       attribution: "Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community"
