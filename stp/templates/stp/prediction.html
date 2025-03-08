@@ -313,19 +313,7 @@
           </div>
 
           <!-- Map Legend -->
-          <div class="map-legend">
-            <h6>Legend</h6>
-            <div class="legend-item">
-              <span class="legend-color"
-                style="background-color: rgba(118, 186, 27, 0.2); border: 2px solid #76ba1b;"></span>
-              <span>Selected Area</span>
-            </div>
-            <div class="legend-item">
-              <span class="legend-color"
-                style="background-color: rgba(0, 123, 255, 0.2); border: 2px solid #007bff;"></span>
-              <span>Points of Interest</span>
-            </div>
-          </div>
+          
 
           <!-- Map Container -->
           <div id="map" class="leaflet-map"></div>
@@ -760,6 +748,7 @@
   let selectedCategories = [];
   let currentBoundary = null;
   let map;
+  let legend = null;
 
   function showLoader() {
     document.getElementById("loading-container").style.display = "flex";
@@ -2090,18 +2079,6 @@
     event.preventDefault();
     try {
       showLoader();
-
-      // Determine which location data to use based on active selection
-      const activeLocation = document.getElementById("tier-dropdown").value
-        ? {
-          ...selectedTierLocation,
-          locationType: 'tier'
-        }
-        : {
-          ...selectedLocation,
-          locationType: 'standard'
-        };
-
       const response = await fetch("/stp/tempy/", {
         method: "GET",
         headers: {
@@ -2121,7 +2098,7 @@
           .map(feature => feature.properties.MEAN)
           .filter(value => value !== undefined && value !== null);
 
-        // Sort values to create quantile breaks
+        
         meanValues.sort((a, b) => a - b);
 
         // Create 5 breaks (quartiles)
@@ -2203,7 +2180,7 @@
         addLegend(breaks, colors, categoryNames);
       }
     } catch (error) {
-      alert("Failed to submit form. Please try again.");
+      console.log("error in ",error)
     } finally {
       hideLoader(); // Hide loading GIF after request completes
     }
@@ -2212,22 +2189,23 @@
 // Updated legend function to include category names
 function addLegend(breaks, colors, categoryNames) {
   // Remove existing legend if present
-  if (legend) {
-    legend.remove();
-    legend = null;
+  if (window.legend) {
+    map.removeControl(window.legend);
   }
 
   // Create a new legend
-  legend = L.control({ position: "bottomright" });
+  window.legend = L.control({ position: "bottomright" });
 
-  legend.onAdd = function () {
+  window.legend.onAdd = function () {
     const div = L.DomUtil.create("div", "info legend");
     div.style.backgroundColor = "white";
     div.style.padding = "10px";
     div.style.borderRadius = "5px";
     div.style.boxShadow = "0 0 15px rgba(0,0,0,0.2)";
+    div.style.pointerEvents = "auto"; // Make sure it can receive clicks
+    div.style.zIndex = "1000"; 
 
-    div.innerHTML = "<h4>Legend</h4>";
+    div.innerHTML = "<h4 style='margin-top: 0; margin-bottom: 8px;'>Legend</h4>";
 
     // Add legend items with both color squares and category names
     for (let i = 0; i < colors.length; i++) {
@@ -2236,7 +2214,7 @@ function addLegend(breaks, colors, categoryNames) {
       
       div.innerHTML +=
         '<div style="display: flex; align-items: center; margin-bottom: 5px;">' +
-        `<i style="background: ${colors[i]}; width: 18px; height: 18px; display: inline-block; margin-right: 8px;"></i>` +
+        `<i style="background: ${colors[i]}; width: 18px; height: 18px; display: inline-block; margin-right: 8px; border: 1px solid #555;"></i>` +
         `<span><strong>${categoryNames[i]}</strong> (${fromValue} - ${toValue})</span>` +
         '</div>';
     }
@@ -2244,7 +2222,7 @@ function addLegend(breaks, colors, categoryNames) {
     return div;
   };
 
-  legend.addTo(map);
+  window.legend.addTo(map);
 }
   // Make sure you have this function defined
   function clearBoundary() {
